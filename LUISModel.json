@@ -1,0 +1,471 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "FitWell",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "LogMeal"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Food"
+    },
+    {
+      "name": "FoodUnit"
+    },
+    {
+      "name": "Weight"
+    }
+  ],
+  "composites": [],
+  "bing_entities": [
+    "number"
+  ],
+  "actions": [],
+  "model_features": [
+    {
+      "name": "FoodUnit",
+      "mode": true,
+      "words": "Scoop,Regular,Small,Medium,Large,Extra Large,Individual,Side,Appetizer,Entree,Capsule,Kids,Whole,Pat,Pouch,Drop,Jumbo,Second Spray,Topping,Portion Cup,Caplet,Mini,Cubic Inch,Thin Slice,Sheet,Family,# 10 Can,As Entered,Order,Thick Slice,Dry Serving,Teaspoon,Tablespoon,Cup,Piece,Each,Ounce - weight,Pound,Gram,Kilogram,Fluid ounce,Milliliter,Liter,Gallon,Pint,Quart,Milligram,Microgram,Intake,Individual Cu,Bottle,Box,Can,Individual Ba,Cube,Jar,Stick,Tablet,Bowl,Meal,Slice,Serving,300 Can,303 Can,401 Can,404 Can,Individual Pa,Bag,Container,Package,Handful,Glass,Dessert Spoon",
+      "activated": true
+    },
+    {
+      "name": "Food",
+      "mode": true,
+      "words": "Çılbır ( Az yağlı ),Triple Chocolate Cookie Nibblers,Old Fashoned Butter Pecan Coffee Small,Cranberry Cocktail Juice Drink With Calcium Saccharine & Sweetener Low Calorie,Breaded Turkey Patty Fried 2 . 25 Oz,Southern Fried Chicken Frozen,Garden Sandwich With Whole Grain Bun,Chicken Gravy Canned,Key Lime Fresh,Psychadelic Sorbet,Garden Style Tomato Sauce,Key Lime Fresh Sections,Triple Chocolate Decadence Cookie Dough Ultimates Refrigerated,Southern Style Biscuit Dough Frozen,Breaded Zucchini Fried,Chicken Gravy Canned Fat Free,Old Fashoned Butter Pecan Coffee With Cream,Extra Large,Cranberry Concord Grape Blend Juice,Psyllium Fiber Supplement,1 % Milk,Southern Style Black Eyed Peas,Garden Style Twirls Pasta Dry Enriched,Key Lime Frozen Yogurt,Triple Chocolate Fudge Cake Mix Super Moist,Chicken Gravy Canned With Roasted Garlic,Breaded Zucchini Platter Fried,Large,Pub Style Horseradish Sauce,Southern Style Chicken & Dumpling Soup,Bahçıvan Kebabı ( fırında ),Garden Vegetable & Mozzarella Egg White Omelette Frozen,Cranberry Cove Snack Mix,Chicken Gravy Mix,Breadfruit Seeds Cooked,Key Lime Greek Frozen Yogurt,1 % Milk With Heartright,Medium,Triple Chocolate Fudge Chip Frosting Rich & Creamy,Garden Vegetable Broth Canned,Southern Style Chicken Breakfast Sandwich With Biscuit,Cranberry Cream Cheese Wheel,Puff Pastry Baked From Frozen,Shell,1 % Milk With Omega 3 & Vitamin E,Small,Breadfruit Seeds Raw,Chicken Grilled Kids ',Triple Chocolate Happiness Frozen Dessert Cone Yours Truly,Key Lime Greek Yogurt Traditional,Cranberry Crunch Muesli,Breadfruit Seeds Roasted,Ole Pizza 12 \",1 % Milk With Vitamins A & D,Garden Vegetable Burger Patty Boca Vegetarian,Southern Style Chicken Breakfast Sandwich With Large Biscuit,Puff Pastry Dough Frozen Ready To Bake,Sheet,Ananas,Cranberry Crunch Muffin Gluten Free,Garden Vegetable Cheese Ball Almond Coated,Breadnut Tree Seeds Dried,Ole Pizza 15 \",Triple Chocolate Ice Cream,Key Lime Ice Cream,Southern Style Chicken Sandwich,Cranberry English Muffin,Breadstick,Garden Vegetable Cheese Fat Free,Triple Chocolate Ice Cream With Splenda Light,No Sugar Added,Southern Style Crispy Chicken Sandwich,Olive & Pimento Cheese Spread,Cranberry Formula Utymax Powder With Cranmax,Chicken Grilled With Garlic Butter & Oil,Key Lime Jalapeno Tortilla Chips White Corn,Puff Pastry Shell Frozen Ready To Bake,Senior,Southern Style Hash Browns Frozen,Key Lime Pie,Cranberry Fruit & Nuts Trail Mix,Olive Cream Cheese,Garden Vegetable Cheese Spread,Southern Style Hash Browns Frozen Diced,Chicken Grilling Seasoning,Granola ( 1 dilim ananas + Tarçın + Süt ),Puffed Barley Cereal,Triple Chocolate Indulgence Cookie Dough Big Deluxe Classics Refrigerated,Olive Loaf Bread,Cranberry Gelatin Mix Jell - o,1 . 5 % Milk,Chicken Gumbo Canned Reduced Sodium,Puffed Cereal Kamut,Cranberry Gelatin Mix Jell - o Sugar Free,Key Lime Pie Energy Bar Larabar,Southern Style Iced Tea Gold Peak,Olive Lunchmeat Loaf,Triple Chocolate Muffin,Cranberry Ginger Ale Diet Soda Canada Dry,1 / 2 Lb Cheeseburger Sizzler,Olive Lunchmeat Loaf Bulk,Key Lime Pie From Scratch,Chicken Gumbo Soup,Triple Chocolate Strata Cake,1 / 2 Lb Double Cheeseburger Dave ' s Hot ' n Juicy,Southern Style Iced Tea Nestea,Cranberry Ginger Ale Soda Canada Dry,Olive Lunchmeat Loaf Sliced,Garden Vegetable Cracker Wheat Thins Harvest,Breadstick Cinna Stix,Key Lime Pie Frozen,1 / 3 Lb Cheeseburger Sizzler,Triple Chocolate Sundae Cone King Size,Puffed Cereal Kamut With Honey Lowfat,Garden Vegetable Cream Cheese,Olive Oil,Cranberry Ginger Cereal Optimum Zen,1 / 3 Lb Cheeseburger Sizzler Kids ',Triple Chunk Brownie Mix Supreme,Southern Style Spicy Chicken Sandwich,Puffed Cereal With Honey Wheat Free,Breadstick Crazy Bread,Key Lime Pie Frozen With Graham Cracker Crust & Whipped Topping,Garden Vegetable Cream Cheese Substitute Vegan,Chicken Heart Raw,Cranberry Ginger Instant Oatmeal Optimum Zen Dry,Breadstick Dough Frozen,Southewestern Chicken Chorizo Breakfast Wrap,Puffed Corn Cereal,Triple Cocoa Doughnut,Olive Oil & Balsamic Vinaigrette Salad Dressing,1 / 3 Lb Southwest Patty Melt Sandwich Thickburger,Garden Vegetable Eggs Liquid,Key Lime Pie Yogurt Fiber One With Aspartame Fortified,Nonfat,1 / 4 Lb Cheeseburger Dave ' s Hot ' n Juicy,Triple Cream Brie Cheese With Wild Mushrooms,Chicken Heart Simmered Chopped,Breadstick Uno,Olive Oil & Garlic Pasta Sauce With Fresh Tomatoes,Southwest Bacon Melt Breakfast Sandwich,Garden Vegetable Enchilada Frozen Lowfat,Key Lime Pie Yogurt Lowfat,Cranberry Ginger Soy Energy Bar,Southwest Black Bean Soup,Puffed Millet,1 / 4 Lb Southwest Patty Melt Sandwich Thickburger,Chicken Herb Bouillon Dry Instant,Triple Ginger Cookie Thins,Breadstick With Cheese Dip,Key Lime Pie Yogurt Thick & Creamy Light,Olive Oil & Italian Herb Linguine Nature ' s Way Dry,Cranberry Granola,Garden Vegetable Flavor Cream Cheese Soft,Chicken Herb Mediterranean Pizza Delıte Family,Breakfast Bowl Low Carb,10 Grain Bread Health - full,Olive Oil & Vinegar Salad Dressing,Puffed Millet Cereal,Southwest Black Bean Soup Canned,Triple Grain Crisps Cereal,Key Lime Pie Yogurt Thick & Creamy Lowfat,Cranberry Grape B12 Blast Energy Mixer Drink Power Shots,Garden Vegetable Lasagna Frozen,10 Grain Bread Mix,Breakfast Burrito Big Country,Southwest Black Beans,Chicken Herb Mediterranean Pizza Delıte Large,Triple Hamburger Texas Whopper,Olive Oil Cooking Spray,Cranberry Grape Cocktail Juice Drink Smart,Key Lime Pie Yogurt With Aspartame Fat Free,10 Grain English Muffin Health - full,Puffed Rice Cereal,Olive Oil Cooking Spray Organic,Breakfast Burrito Border Scramble With Egg,Cranberry Grape Drink Mix,Southwest Blend Vegetables Recipe Ready Frozen,Garden Vegetable Lasagna Frozen Lowfat,Triple Hamburger Whataburger,Chicken Hot Dog,Key Lime Pie Yogurt With Aspartame Light,10 Grain Pancake Mix,Breakfast Burrito Border Scramble With Egg Lites,Southwest Blend Vegetables Ultimate Frozen,Garden Vegetable Pasta Sauce,Olive Oil Light,Triple Hamburger Whopper,Key Lime Soy Yogurt,Chicken Hot Dog Uncured,Cranberry Grape Juice Drink,10 Grain Pancake Mix Quick,Garden Vegetable Rice Pilaf Mix,Puffed Wheat Cereal,Breakfast Burrito Border Scramble With Egg Whites,Southwest Breakfast Wrap Frozen With Black Beans & Garden Sausage,Key Lime Swirl Cheesecake Frozen,Olive Oil Originale,Chicken Kids ',Triple Hamburger Whopper Without Mayonnaise,Southwest Chargrilled Chicken Salad,Olive Oil Parmesan & Roasted Garlic Potatoes Oven Reds Frozen,Breakfast Burrito Chickichanga,Chicken Korma Meal Frozen With Brown Rice,10 Grain Waffle Mix,Key Lime Twist Soda,Pulled Bbq Chicken Sandwich,Southwest Chicken Breast Refrigerated Strips,Cooked,Garden Vegetable Rice Ready Rice Ready To Heat,Breakfast Burrito Frozen,Olive Oil Pure,Triple Meat Italiano Hand Tossed Pizza Large,14 \",Key Lime Yogurt,Southwest Chicken Chili Without Toppings,Garden Vegetable Salad Topping,Breakfast Burrito Frozen With Turkey Bacon Egg Whites Vegetables & Cheese,Cranberry Grape Juice Unsweetened,Triple Meat Italiano Hand Tossed Pizza Medium,12 \",Chicken Lasagna Frozen Family Size,10 Grain Waffle Mix Quick,Olive Oil Vinaigrette Salad Dressing,Pulled Beef Brisket Smoke House In Smoky Bbq Sauce,Olive Pimento Cream Cheese,100 Proof Aquavit,Garden Vegetable Soup,Southwest Chicken Meal Frozen With Rice Beans & Corn,Cranberry Grape Protein Drink Healthy Shot,Key Lime Yogurt Light,Breakfast Burrito Junior,Triple Meat Italiano Pan Pizza Large,Chicken Leg Flame Grilled,Southwest Chicken Panini Sandwich Corner Bistro Frozen,Pulled Pork Fajita Topping,Olive Pork Lunchmeat 4 \" X 4 \" X 3 / 32 \" Slice,Triple Meat Italiano Pan Pizza Medium,Key West Crepe,Chicken Leg Grilled,100 Proof Bourbon,Breakfast Burrito Meat Lover ' s Boburrito With Egg,Olive Tapenade Appetizer With Flatbread,Triple Meat Italiano Pan Pizza Personal,Cranberry Grapefruit Juice Drink Lean,Pulled Pork Sandwich Itsy Bitsy Trio,Southwest Chicken Panini Sandwich Frozen,100 Proof Brandy,Chicken Leg Raw Quarter,With Skin,Triple Meat Italiano Pizza Panormous Personal,Kickin ' Carne Asada Beef Strips Steakhouse,Pulled Shreds Chicken - less In Bbq Sauce Vegetarian,Breakfast Burrito Meat Lover ' s Boburrito With Egg Lites,Garden Vegetable Soup Canned,Omega 3 Booster Juice Fresh,Cranberry Grapefruit Juice Drink Snapple,100 Proof Gin,Southwest Chicken Soft Taco,With Skin & Bone,Omega - 3 Wheat Bread 6 \",Triple Meat Italiano Pizza Thin ' n Crispy Large,Cranberry Harvest Juice Drink 50 % Juice,Kidney Beans Canned,Breakfast Burrito Meat Lover ' s Boburrito With Egg Whites,Pummelo Fresh,100 Proof Rum,Chicken Leg Raw Skinless,Cranberry Iced Tea,Breakfast Burrito Supersonic,100 Proof Tequila,Triple Meat Italiano Pizza Thin ' n Crispy Medium,Omelet Breakfast Sandwich Bmt Melt With Flatbread,6 \",Pummelo Fresh Sections,Chicken Leg Raw Whole,100 Proof Vodka,Breakfast Burrito Western Boburrito With Egg,Garden Vegetable Soup Canned Reduced Sodium,Southwest Chicken Submarine Sandwich 6 \",Omelet Breakfast Sandwich Bmt Melt With Wheat,Breakfast Burrito Western Boburrito With Egg Lites,Garden Vegetable Soup Light Sodium,Triple Meat Italiano Stuffed Crust Pizza Large,With Skin Organic,Omelet Breakfast Sandwich Subway Sunrise Melt With Flatbread,Kidney Beans Canned 50 % Less Sodium,100 Proof Whiskey,Pumpernickel Bagel,Cranberry Juice,Southwest Chicken Taco Meal With Rice & Red Chile Sauce,Garden Vegetable Soup Vegetable Classics Canned,100 % Cacao Baking Chocolate Bar Unsweetened,Omelet Breakfast Sandwich Subway Sunrise Melt With Wheat,Chicken Leg Raw With Skin,Kidney Beans Canned Fat Free,Unsalted,Breakfast Burrito Western Boburrito With Egg Whites,Southwest Chicken Taquito Cruncheros Frozen With Flour Tortilla,Triple Mushroom Pasta Sauce,Kidney Beans Canned Organic,Omelet Puree Frozen Shaped,100 % Multigrain Bread,Garden Vegetable Soy Cream Cheese,Breakfast Burrito Whole Nine Yards Frozen With Eggs Meat Potatoes Cheese & Pinto Beans,Southwest Chicken Taquito Frozen With Flour Tortilla,Triple Nut & Flakes Cereal Reduced Sugar,Kidney Beans Cooked,100 % Multigrain Bun Thin Style,Chicken Leg Roasted Skinless,Garden Vegetable Whipped Cream Cheese Reduced Fat,Omelette Acupulco Express,Breakfast Burrito Without Sausage,Cranberry Juice Concentrate,Chicken Leg Roasted With Skin,Kidney Beans Dry,Triple Sec Non Alcoholic Mixer Angostura,100 % Pure Pumpkin Canned,Southwest Chili Hot Dog With Bun,Omelette Bacado,Breakfast O ' s Cereal,Pumpernickel Bagel California Only,Cranberry Juice Drink Concentrate Frozen,Breakfast Platter Meal,Chicken Leg Rotisserie,Southwest Chipotle Sauce,100 % Whole Grain Bread,Tripleberry Brownie Frozen Dessert Blizzard Large,Kidney Refried Beans Canned,Pumpernickel Bread,Breakfast Platter Meal Bk,Garden Vegetables With Herb Butter Sauce,Southwest Chipotle Seasoning,Omelette Border Scramble,Kids Snack Mix,Cranberry Juice Drink Cran - energy,Tripleberry Brownie Frozen Dessert Blizzard Medium,Breakfast Platter Meal Bk Ultimate,Garden Veggie Burger Patty Morningstar Farms Vegetarian,Omelette Border Scramble With Egg Lites,Kielbasa,100 % Whole Grain Bread Dutch Country,Chicken Light Meat Raw Skinless,Cranberry Juice Drink Honey Consistency,Kielbasa Vegetarian Sausage Tofurky,Omelette Border Scramble With Egg Whites,Southwest Corn Canned With Poblano & Red Peppers,Chicken Light Meat Raw With Skin,Garden Veggie Cracker,100 % Whole Grain Bread Hearty,Cranberry Juice Drink Light,Tripleberry Brownie Frozen Dessert Blizzard Mini,Breakfast Pocket With Pita Bread,Pumpernickel Bread Family,Omelette C ' est La Vie,Chicken Light Meat Roasted Skinless,Southwest Crispy Chicken Strip Salad,Garden Veggie Cream Cheese,Breakfast Quesadita Without Sausage,Kim Chee,100 % Whole Wheat Bagel,Tripleberry Brownie Frozen Dessert Blizzard Small,Omelette Gravy Train,Pumpernickel Bread Party Size,Cranberry Juice Drink Minute Maid,Breakfast Sandwich Belt Without Cheese,With Bagel,Garden Veggie Cream Cheese Light,Southwest Grilled Chicken Salad,100 % Whole Wheat Bagel Frozen New York Style,Tripleberry Brownie Ice Cream Cake Blizzard 1 / 12 Of 10 \",Omelette Greek Fetish,Pumpernickel Bread Snack,Chicken Light Meat Roasted With Skin,Garden Veggie Hamburger,Kimchi Dried,Cranberry Juice Drink Nectar Consistency,Breakfast Sandwich Big N ' Toasted,100 % Whole Wheat Bagel Mini,Southwest Grilled Chicken Salad With Dressing & Shell,Tripleberry Brownie Ice Cream Cake Blizzard 1 / 8 Of 8 \",Omelette Healthy Turkey,Pumpernickel Melba Toast,Cranberry Juice Drink Thickened,Honey Consistency,Garden Veggie Sandwich Deli With Bagel,Breakfast Sandwich Bmt Melt With English Muffin,Triticale Berries Dry,Omelette Killer Cajun,Pumpernickel Roll Medium,Chicken Linguini Café Steamers Frozen With Red Pepper Alfredo,Kimchi Fried Rice Frozen,Southwest Grilled Chicken Salad Without Dressing & Shell,Breakfast Sandwich Breakfast Burger,Garden Veggie Sandwich Deli With White,Omelette Meal Fit Fare Senior,Triticale Dry Whole Grain,100 % Whole Wheat Bagel Refrigerated,Nectar Consistency,Southwest Grilled Chicken Strip Salad,Pumpernickel Rye Bread,Kinda Hot Chili Pepper Beef Jerky Dare,Chicken Liver Pate Canned,Triticale Flour Whole Grain,100 % Whole Wheat Bagel Whole Grain,Omelette Meal Fit Fare With Sides,Breakfast Sandwich Breakfast Jack,Cranberry Juice Prepared From Concentrate,Kinda Hot Chili Pepper Meat Stick Dare Giant,Garden Veggie Sandwich With Pita,Pumpkin Canned Unsalted,100 % Whole Wheat Bread,Southwest Ham Melt Breakfast Sandwich,Stone Ground,Omelette Meal Moons Over My Hammy With Hash Browns,Without Bread,Cranberry Juice Unsweetened,Garden Veggie Tempeh Lightlife,Breakfast Sandwich Enormous Omelet,Chicken Livers Fried Breaded,Kiss N Tell Ice Cream Sandwich,Southwest Jalapeno Cornbread,Triticale Hot Cereal Dry,Omelette Senior,Cranberry Lemonade,Pumpkin Cooked Drained,Mashed,Breakfast Sandwich Extreme Sausage,Garden Wrap,Kiwi Banana Blended Drink Dutch Ice Large,Pumpkin Fresh,Cranberry Lemonade Mix,Omelette Spanish,Southwest Marinade Mix,Tri - tip Sirloin Beef Roast Raw Choice,0 \" Trim,Breakfast Sandwich Frisco,Gardener ' s Blend Vegetables Frozen,Kiwi Banana Blended Drink Dutch Ice Regular,Cranberry Lime Cocktail Juice Drink,Pumpkin & Squash Infant Vegetable 2nd Foods Pouch,Chicken Livers Raw,Garfield Pasta Spaghettios Canned,Kiwi Banana Blended Drink Lemonade Mixer Extra Large,Breakfast Sandwich Frozen With English Muffin,Cranberry Limeade Minute Maid,Chicken Livers Simmered Chopped,Garlic & Basil Sauce Ragu Pizza Quick,Pumpkin Bagel,Kiwi Banana Blended Drink Lemonade Mixer Frozen Large,Garlic & Butter Croutons,Chicken Lo Mein,Cranberry Muffin With Orange Glaze,Kiwi Banana Blended Drink Lemonade Mixer Frozen Regular,100 % Whole Wheat Bread Classic,With Calcium & Vitamin D,Garlic & Herb Bagel Chips,Cranberry Mustard,Kiwi Banana Blended Drink Lemonade Mixer Large,Garlic & Herb Bread Crumbs,100 % Whole Wheat Bread Country,Cranberry Nectar,Kiwi Banana Blended Drink Lemonade Mixer Medium,Garlic & Herb Cheddar Cheese,100 % Whole Wheat Bread Dutch Country,Kiwi Banana Blended Drink Lemonade Mixer Small,Cranberry Nut Muffin,Cranberry Nut Muffin Bake N Joy,Garlic & Herb Cheese Ball Almond Coated,Kiwi Banana Smoothie Dutch Large,100 % Whole Wheat Bread Fiber One,Kiwi Banana Smoothie Dutch Regular,Cranberry Nut Oatmeal With 1 % Milk,Omelette Swisshroom,Tri - tip Sirloin Beef Roast Roasted Choice,Chicken Lo Mein Kids ',Garlic & Herb Cheese Shredded,Kiwi Berries Fresh,Cranberry Nut Pancakes,100 % Whole Wheat Bread Light,Pumpkin Bar Live,Southwest Mashed Potatoes Dry,Breakfast Sandwich Frozen With Vegetarian Sausage Egg Cheese & Biscuit,100 % Whole Wheat Bread Made With Honey,Chicken Lo Mein Skillet Meals Frozen With Vegetables,Garlic & Herb Cheese Spread,Tropical + Carrot Juice,Cranberry Oatmeal Cookie Energy Bar Powerbar Pure & Simple,Breakfast Sandwich Grilled,Pumpkin Bar Mix,Kiwi Berry Soda The Switch 8 . 3 Fl Oz Can,Omelette The Forager,Southwest Patty Melt Sandwich Six Dollar Thickburger,Chicken Lunchmeat Spread Canned,100 % Whole Wheat Bread Mix,Garlic & Herb Chicken Breast Grilled,Tropical Banana Energy Bar Raw Revolution,Cranberry Orange Bagel,Pumpkin Bread,Kiwi Dried Unsulfured,Sweetened,Breakfast Sandwich Monster Biscuit,100 % Whole Wheat Bread Soft Family,Garlic & Herb Chicken Ready To Roast,Chicken Malibu Double,Tropical Banana Smoothie Large,Southwest Premium Crispy Chicken Salad,Pumpkin Bread La Boulange,Omelette The Works,Kiwi Fresh,Chicken Malibu Single,Breakfast Sandwich Monster With Biscuit,Garlic & Herb Chik ' n Cutlet Quorn Vegetarian,Tropical Banana Smoothie Medium,Omelette Tri - athlete,Pumpkin Bread Mix,Cranberry Orange Bread Mix,Southwest Premium Grilled Chicken Salad,Chicken Mango Risotto Infant Dinner 2nd Foods Gourmet,Garlic & Herb Coating Mix,Kiwi Fresh Sliced,100 % Whole Wheat Bread Stone Ground,Breakfast Sandwich Subway Sunrise Melt With English Muffin,Cranberry Orange Cookie With White Chocolate Chips,Tropical Banana Smoothie Mini,Southwest Premium Salad Without Chicken,Pumpkin Bread Pudding Frozen,Omelette Ultimate Without Sides,Chicken Maple Apple Breakfast Sausage,Kiwi Lime Soy Yogurt Cultured,Breakfast Sandwich Ultimate,Cranberry Orange Instant Oatmeal Dry In A Cup,Southwest Ranch Snack Bugles,Tropical Banana Smoothie Small,Omelette Veg ' d Out,Pumpkin Butter Spread,Garlic & Herb Cream Cheese Substitute Better Than,Kiwi Lime Syrup,Chicken Margherita Café Steamers Frozen With Pasta,100 % Whole Wheat Bread With Calcium & Vitamin D,Cranberry Orange Muffin,Tropical Barbecue Sauce,Southwest Salad,Kiwi Strawberry Blended Drink Arctic Rush Freeze Large,Omelette Via Veneto,Pumpkin Cheesecake,Chicken Margherita Flatbread Pizza Lighter Option,Breakfast Sandwich With Bagel,Garlic & Herb Feta Cheese,100 % Whole Wheat Bread With Honey,Cranberry Orange Muffin Mix Fat Free,Kiwi Strawberry Blended Drink Arctic Rush Freeze Medium,Tropical Berry Gelatin Jell - o Snack Cup Sugar Free,Garlic & Herb Feta Cheese Crumbled,Chicken Marsala Meal,Cranberry Orange Relish Canned,Omg ! My Favorite Juice ! Juice Fresh,100 % Whole Wheat Bun Thin Style,Breakfast Sandwich With Glazed Donut,Kiwi Strawberry Blended Drink Arctic Rush Freeze Small,Pumpkin Cheesecake Frozen,Southwest Salad Mix,Garlic & Herb Feta Cheese Crumbles,Tropical Blend Kombucha Super Green,Chicken Marsala Meal Frozen With Linguine,100 % Whole Wheat Dinner Roll,On The Trail Snack Mix,Cranberry Orange Scone,Pumpkin Chips Super Raw,Southwest Salad With Black Beans Corn Cotija Cheese & Ranch Dressing,Breakfast Sandwich With Sourdough,100 % Whole Wheat English Muffin,Garlic & Herb Field Vegetable Crisps Baked,Tropical Blend Sports Drink G02 Perform Low Calorie,On The Yogo Smoothie Sinless Gotta Have It,Kiwi Strawberry Blended Drink Arctic Rush Large,Chicken Marsala Meal Frozen With Mushrooms & Broccoli,Pumpkin Coffee Cake,Southwest Salad With Black Beans Corn & Cotija Cheese,Breakfast Sausage Link,On The Yogo Smoothie Sinless Like It,Tropical Candy Dots,Kiwi Strawberry Blended Drink Arctic Rush Medium,Chicken Marsala Meal Stuffed,Breakfast Sausage Link Puree Frozen Shaped,Southwest Santa Fe Salad,Pumpkin Cranberry Apple Infant Vegetable 3rd Foods Pouch,Garlic & Herb Long Grain & Wild Rice Pilaf Mix,100 % Whole Wheat Flatbread Pocket Thins,On The Yogo Smoothie Sinless Love It,Tropical Candy Skittles,Kiwi Strawberry Blended Drink Arctic Rush Small,Chicken Marsala Meal With Spaghetti & Mizithra Cheese,Breakfast Sausage Link Whole - e - smokes,Southwest Sausage Melt Breakfast Sandwich,Garlic & Herb Pasta Sauce,One Sweet Whirled Ice Cream,Kiwi Strawberry Blended Drink Ice Crush Chiller Regular,100 % Whole Wheat Hamburger Bun,Pumpkin Cranberry Crisps Cracker,Cranberry Orange Scone La Boulange,Tropical Carrot Blend Juice,Southwest Style Chicken Frozen With 7 Grain Pilaf,100 % Whole Wheat Hot Dog Bun,Onion & Chive Cheddar Cheese,Chicken Marsala With Mushrooms,Cranberry Orange Scone Mix,Breakfast Sausage Patty,Kiwi Strawberry Blended Drink Ice Crush Chiller Small,Garlic & Herb Pasta Sauce Mix,Pumpkin Cranberry Scone Mix,Tropical Citrus,Energy Flavored Water,100 % Whole Wheat Pita Bread Sahara Pocket,Southwest Style Chicken - free Strips Vegetarian,Cranberry Pecan Chicken Salad Savory,With Italian Dressing,Onion & Chive Cream Cheese,Garlic & Herb Pita Chips,Kiwi Strawberry Diet Drink Snapple,Pumpkin Cream Cheese,Chicken Meal Big Bordurrito With Rice & Salad,Without Dressing,Tropical Coconut Water,Garlic & Herb Pizza Crust Dough Refrigerated,Cranberry Pecan Chicken Salad With Italian Dressing,Mini,Chicken Meal Byo With Rice & Beans,Southwest Style Grass - fed Beef Meal Frozen With Pilaf & Vegetables,Tropical Energy Juice Drink Serious Energy,Pumpkin Cream Cheese Spread,Breakfast Sausage Patty Boca Vegetarian,Kiwi Strawberry Diet Soda Shasta With Aspartame,Onion & Chive Dip Mix,Chicken Meal Frozen With Gravy & Green Beans,Homestyle,Garlic & Herb Potatoes Dry In A Cup,Tropical Flavored Ice,Pumpkin Croissant Frozen,Southwest Style Salsa,100 % Whole Wheat Pizza Crust Thin,Cranberry Pecan Granola,Breakfast Sausage Patty Yves Vegetarian,Kiwi Strawberry Diet Soda With Splenda,Chicken Meal Little Bordurrito With Rice & Salad,Onion & Chive Whipped Cream Cheese,Garlic & Herb Rice Pilaf Express Long Grain & Wild,Ready To Heat,Tropical Flavored Water Radiant,Pumpkin Date Energy Bar Rawma,100 % Whole Wheat Sandwich Bread Sandwich Thins,Garlic & Herb Rice Pilaf Mix,Kiwi Strawberry Drink Sugar Free,Cranberry Pomegranate Blend Juice,Southwest Toaster Pastry Toaster Scrambles Frozen Reduced Fat,Pumpkin Empanada,Chicken Meal Thumb Platter With Fries,Lunch,Breakfast Sausage Sandwich Topping,Tropical Flavors Fruit Snacks Fruit Gushers,Breakfast Scramble Meal Frozen With Eggs Potatoes & Turkey Ham,Pumpkin Energy Bar Rawma,Chicken Melt Pocket Frozen,Kiwi Strawberry Flavored Blend Juice,Tropical Frozen Dessert Blizzard Large,Garlic & Herb Roasted Potatoes Frozen,Onion & Garlic Croutons Classic Cut,Southwest Turkey Sausage Breakfast Sandwich With Bagel Thin,100 % Whole Wheat Sandwich Bun,Breakfast Syrup,Chicken Milanese Salad With Dressing,Pumpkin Frozen Yogurt,Kiwi Strawberry Ice Cream Float Arctic Rush Large,Garlic & Herb Salad Dressing Mix,Cranberry Pomegranate Cherry Blend Juice,Tropical Frozen Dessert Blizzard Medium,Onion & Herb Seasoning,Kiwi Strawberry Ice Cream Float Arctic Rush Medium,100 % Whole Wheat Sandwich Roll,Chicken Mirabella Frozen With Pasta Wine Sauce & Vegetables,Breakfast Taco Without Sausage,Cranberry Pomegranate Drink Mix,Pumpkin Ginger Muffin Reduced Fat,Onion & Poppy Matzoh,Kiwi Strawberry Ice Cream Float Arctic Rush Small,Tropical Frozen Dessert Blizzard Small,Garlic & Herb Sauce Mix,Chicken Monterey Enchilada Frozen With Rice,Cranberry Pomegranate Green Tea Bag,Southwest Vegetarian Burger,Breakfast Vegetarian Sausage Link Boca,100 % Whole Wheat Thin Bagel,Garlic & Herb Seasoning,Onion Bagel,Tropical Fruit Boost Juice Drink Twister,Kiwi Strawberry Juice,Chicken Mulligatawny Soup,Cranberry Pomegranate Juice Drink Cran - energy,Southwest Veggie Soup With Quinoa,100 % Whole Wheat Tortilla Medium,Garlic & Herb Soy Cream Cheese,Pumpkin Granola,Kiwi Strawberry Juice Drink 10 % Juice,Chicken Mushroom & Jalapeno Pizza Fit ' n Delicious Medium,Breakfast Vegetarian Sausage Link Smart Links,Cranberry Pomegranate Supplement Emergen - c,12 Grain Bagel,Garlic & Herb Spread,Southwest White Cheddar & Poblano Soup,Tropical Fruit Chews Candy Starburst,Pumpkin Granola Bar Flaxplus,Breakfast Vegetarian Sausage Link Tofurky,Chicken Mushroom Chowder Canned Chunky,Kiwi Strawberry Juice Drink Snapple With Vitamin C,Cranberry Raisin & Almond Granola Bar Trail Mix,Garlic & Herb Vegetables Frozen Lowfat,Southwestern Black Bean & Corn Soup,Tropical Fruit Drink Cytomax Performance,Chicken Mushroom Soup Prepared With Water,Breakfast Wrap Power,Pumpkin Greek Yogurt Nonfat,12 Grain Bread,Tropical Fruit Drink Sidekicks Clear Ready To Drink,Kiwi Strawberry Juice Drink Thickened,Cranberry Raisin Cereal,Garlic & Herb Whipped Cream Cheese Reduced Fat,Southwestern Chicken With Rice Beans & Corn,Chicken Mushroom Spinach Pocket Frozen With Whole Grain,Breakfast Wrap Spicy Elmo With Wheat Tortilla,Cranberry Raspberry Blend Juice,Pumpkin Ice Cream,Garlic & Herbs Cheese Baby Brie Wedge,Southwestern Chik ' n Wings Quorn Vegetarian,12 Grain Bread Mix,Chicken Nachos,Breve Coffee Large,Kiwi Strawberry Juice Drink Vitamin C Fortified,Cranberry Raspberry Diet Drink Snapple,Garlic & Herbs Cheese Spread Light,Breve Coffee Medium,Pumpkin Ice Cream Pie 9 \" Round,Southwestern Chipotle Barbecue Sauce,12 Grain Cracker Mini,Snack,Kiwi Strawberry Soda Shasta,Tropical Fruit Freezer Smoothie,Chicken Neck Raw With Skin,Breve Coffee Small,Pumpkin Infant Vegetable 2nd Foods With Apple,Southwestern Chipotle Marinade 10 Minute,Garlic & Herbs Cheese Spread Log,Cranberry Raspberry Flavored Blend Juice,Kiwi Strawberry Sports Drink Recover 03,13 Bean Soup Mix,Tropical Fruit Frozen Dessert Bar No Sugar Added,Fat Free,Garlic & Herbs Cream Cheese,Kiwi Syrup,Chicken Neck Raw Without Skin,Brewer ' s Yeast 10 Grain Tablet,Southwestern Corn Steamfresh Chef ' s Favorites Frozen With Seasoning,Pumpkin Macaron Cookie Frozen,14 Garden Vegetable Soup Canned Reduced Sodium,Cranberry Raspberry Gelatin Mix Jell - o,Garlic & Olive Oil Vermicelli Dry,Kiwi Watermelon Chewing Gum Ice Cubes,Tropical Fruit Granola Bar Grain - ola,Brewer ' s Yeast Powdered Debittered,Chicken Neck Simmered With Skin,Onion Bagel 3 \" Enriched,14 Hours Juice Fresh,Cranberry Raspberry Juice,Southwestern Grill Salsa,Tropical Fruit Greek Yogurt,Brick Cheese,Kiwifruit Jam,Chicken Neck Simmered Without Skin,Pumpkin Muffin,Onion Bagel California Only,2 Go ! Cracker Ritz Mini,Southwestern Jalapeno Cheese Bread Mix,Chicken Noodle Soup,Pumpkin Muffin Lowfat,Kiwifruit Preserves,Brick Cheese Shredded,Cranberry Raspberry Juice Drink Cran - energy,Tropical Fruit Herbal Iced Tea Bag Cool Brew,Garlic & Onion Diced Tomatoes Canned,2 To Go Candy Bar Milky Way,Onion Bagel Frozen New York Style,Brick Oven Classic Pizza Pucillo Individual,Cranberry Raspberry Juice Drink Snapple,Pumpkin Muffin Mix,Southwestern Ranch Tortilla Chips Sensations,Knockout Chocolate Protein Shake Muscle Milk Mega,Garlic & Onion Firm Tofu Nasoya,Onion Bagel Frozen Original,2 To Mango Smoothie Sinless Gotta Have It,Cranberry Raspberry Juice Drink Snapple With Vitamin C,Pumpkin Muffin Top Lowfat,Brick Oven Classic Pizza Pucillo Large,Tropical Fruit Punch Juice Drink 5 % Juice,Knockout Chocolate Protein Supplement Muscle Milk Powder,Garlic & Onion Haddock Fried,Southwestern Rice,Brick Oven Classic Pizza Silano Individual,Cranberry Raspberry Sports Drink Mix,2 To Mango Smoothie Sinless Like It,Kobe Beef Patty,Onion Bagel Mini Enriched,Pumpkin Pancake Mix,Tropical Fruit Salad Canned In Pineapple & Passion Juice,Garlic & Onion Haddock Fried Senior,Cranberry Raspberry Sports Drink Mix Packet,Kohlrabi Cooked Drained,Sliced,Southwestern Rice Steamfresh Chef ' s Favorites Frozen,Onion Bagel New York Style,Brick Oven Classic Pizza Silano Large,Pumpkin Pie,Garlic & Onion Spaghetti Sauce Canned,Tropical Fruit Salad With Heavy Syrup,2 To Mango Smoothie Sinless Love It,Kohlrabi Fresh,Southwestern Steak Breakfast Burrito Meal With Hash Browns,Cranberry Razz Drink Mix Clif Shot,Roasted Veal Chop,Onion Bagel Refrigerated,Tropical Fruit Smoothie,Brick Oven Classic Pizza Sporkie Individual,Karışık Sebze Yemeği,Onion Bagel Stick,Koku Seaweed Rice Cake,Brick Oven Classic Pizza Sporkie Large,Southwestern Style Beans & Rice Dry In A Cup,2 % Milk,Koku Sesame Rice Cake,Garlic Baby Peas & Mushrooms Steamfresh Frozen Lightly Seasoned,Brick Oven Classic Pizza The Bertucci Individual,Cranberry Relish,Onion Baked Beans Canned,Tropical Fruit Smoothie Fruit Blast Large,Kolbassy Beef & Pork Sausage Link With Nonfat Dry Milk,2 % Milk With Calcium & Vitamins A & d,Brick Oven Classic Pizza The Bertucci Large,Southwestern Style Beans & Rice Frozen With Chicken,Garlic Bagel,Onion Bun Gourmet,Tropical Fruit Smoothie Fruit Blast Medium,Komatsuna Fresh Tendergreen,2 % Milk With Vitamin A & D,Southwestern Style Chicken Fresh Mixers,Pumpkin Pie Blend Seasoning,Cranberry Sauce Canned,Brick Oven Style Baked Beans Canned,Tropical Fruit Smoothie Fruit Blast Mini,Kombu Seaweed Dried,Onion Canned Chopped,With Liquid,2 % Milk With Vitamins A & D,Tropical Fruit Smoothie Fruit Blast Small,Southwestern Style Chicken Soup Traditional Canned,Pumpkin Pie Filling Canned,Cranberry Sauce Canned Sweetened,1 / 2 \" Slice,Brie & Fruit Meal With Crackers,Çinekop ızgara,Kombu Seaweed Fresh,Onion Cheese Ball Vidalia Almond Coated,Southwestern Style Eggs Liquid,Cranberry Sauce Reduced Calorie,3 Apple Blend Juice,Kona Coffee Shortbread Cookie Creamy Half - dipped,Tropical Fruit Snack Mix,Petite,Chicken Noodle Soup Big Soup Dry In A Cup Vegetarian,Garlic Bagel California Only,Cranberry Slush Blended Drink Minute Maid,Onion Chili Con Carne Canned With Beans,Garlic Bagel Crisps Baked Mini,Southwestern Turkey Tenderloin Raw Antibiotic Free,Brie Cheese Melted,3 Bean Chipotle Chili Vegetarian,Tropical Fruit Supplement Cytomax Powder Performance,Chicken Noodle Soup Bowl,Korean Barbecue Brown Rice Crisps,Pumpkin Pie Filling Pour N ' Bake,Southwestern Wrap,Chicken Noodle Soup Canned,Garlic Bagel Stick,Onion Chips,Brie Cheese Sliced,3 Grain Blend Rice Dry,Stick,Korean Barbecue Sauce,Cranberry Soy Granola Bar With Ginger,Pumpkin Pie Frozen Dessert Blizzard Large,Garlic Baguette Frozen,Soy & Flaxseed Tortilla Chips,3 Grain Wild Blend Rice Dry,Brie Cheese Spread,Pumpkin Pie Frozen Dessert Blizzard Medium,Garlic Basil Coconut Rice Mix Dry,Cranberry Sparkling Juice,Tropical Goodness Smoothie,Onion Cooked From Frozen,Drained,Chopped,Soy & Peanut Oil,Korean Kimchi Soup Bowl Ready To Heat,3 / 4 Lb Triple Cheeseburger Dave ' s Hot ' n Juicy,Pumpkin Pie Frozen Dessert Blizzard Mini,Brioche Bread Pudding,Onion Cracker Gluten Free,Cranberry Sparkling Juice Drink,Chicken Noodle Soup Canned Condensed,26 Oz,Tropical Juice Box,Garlic Bologna,Onion Cracker Toasteds,Soy Cheese Pizza Frozen,Chicken Noodle Soup Canned Low Sodium,4 Cheese Medley Naturally Rising Crust Pizza Frozen,Korean Noodle Bowl Frozen,Cranberry Sparkling Juice Drink Spritzer,Garlic Bologna Bulk,Pumpkin Pie Frozen Dessert Blizzard Small,Brioche Bun,Chicken Noodle Soup Canned Reduced Sodium,Tropical Juice Box Junior Juice Organic,Pumpkin Pie Frozen Mini,Onion Dehydrated Flakes,Korean Sweet Chili Noodle Bowl Ready To Heat,Soy Cheesy French Bread Pizza Frozen,Cranberry Swirl Toasting Bread,4 Cheese Medley Thin Crispy Crust Pizza Frozen,Garlic Bologna Ring,Chicken Noodle Soup Canned Unsalted,Tropical Juice Drink Fruit Falls,Onion Dehydrated Minced,Brioche French Toast,Pumpkin Pie Frozen Original Flaky Crust,Ready To Bake,Soy Cottage Cheese,Garlic Bread,Cranberry Syrup Minute Maid,4 Grain Hot Cereal Dry Plus Flax,Kosher Baby Dill Pickles,Brioche Toast Cracker,Pumpkin Pie Frozen Ready To Bake,10 \",Onion Dill Bagel,Tropical Lime Gelatin Gelatein Plus High Calorie,High Protein,Chicken Noodle Soup Canned With Roasted White Meat,Microwaveable,Soy Cream Cheese,Kosher Dill Pickles,Brionne Squash Fresh 1 \" Pieces,Pumpkin Pie Ice Cream,Onion Dip Mix,5 Bean Vegetable Soup Canned Reduced Sodium,Tropical Mango Fruit Leather Fruit By The Foot,Soy Creamer,Chicken Noodle Soup Chang ' s,Garlic Bread Seasoning,Cranberry Turkey Medallions Meal Frozen With Stuffing & Potatoes,Brionne Squash Fresh 5 3 / 4 \",Tropical Mango Pineapple Salsa,Pumpkin Pie Ice Cream Cake Blizzard 1 / 10 Of 10 \",5 Cheese Frusta Pizza Frozen,Chicken Noodle Soup Chunky Canned,Brisket Pastrami Choice,Soy Flour Crude Protein Basis N X 6 . 25,Stirred Lowfat,Kosher Dill Pickles Burger Slice,Garlic Bread Toasted,Cranberry Vanilla Almond Snack Bar Q - smart,Chicken Noodle Soup Cup,Soy Flour Stone Ground,Brisket Taco Meal With Jalapeno Bbq Sauce & Rice,Tropical Mango Smoothie Probiotic,5 Grain Medley Grains Dry,Kosher Dill Pickles Chopped,Pumpkin Pie Ice Cream Cake Blizzard 1 / 8 Of 8 \",Garlic Breadstick,Soy Flour Whole,Brisket Taco Meal With Rice,Chicken Noodle Soup Dry In A Cup,5 Grilled Cheese Sandwich With Sourdough,Cranberry Vanilla Walnut Granola Spelt,Onion Dip Mix Dry Reduced Sodium,Broad Beans Canned,Tropical Mango Sports Drink Frost,Defatted,Kosher Dill Pickles Diced,Chicken Noodle Soup Kitchen Classics Canned,Cranberry Walnut Cookie,Pumpkin Pie Soft Serve Frozen Yogurt,Onion Flavor Barbecue Sauce,Broad Beans Cooked Drained,5 Italian Cheese Pizza Brick Oven Frozen,Tropical Medley Smoothie Wholly Grain !,Soy Ginger Noodle Cup Asian Dry,Kosher Dill Pickles Farmer ' s Garden Halves,Chicken Noodle Soup Microwaveable,Pumpkin Pie Spice Blend,Onion Frozen Chopped,10 Oz,Tropical Mixed Fruit Canned,Broad Beans Cooked From Dried,Cranberry Walnut Gorgonzola Salad Dressing,Garlic Breadstick Dough Refrigerated,5 Rolled Grain Hot Cereal Dry,Chicken Noodle Soup Mix,Soy Ginger Noodles Asian Meal Starters,Pumpkin Pie Syrup,Broad Beans Fresh,Kosher Dill Pickles Farmer ' s Garden Spears,Tropical Mixed Fruit Canned In Light Syrup,Cranberry Walnut Granola Bites,Soy Ginger Noodles Ramen House Ready To Heat,Onion Garden Classic Frozen Chopped,Broccolette Fresh Organic,Pumpkin Pie Syrup Sugar Free,Kosher Dill Pickles Halves,50 Plus Formula Multi Vitamin & Mineral One A Day,Garlic Breadstick Dough Refrigerated With Herbs,Cranberry Walnut Mix Salad Topping,Tropical Mixed Fruit Frozen,Pumpkin Protein Shake Super Protein Soy,Onion Garlic Soy Crisps,Chicken Noodle Soup Mix Dry Instant Lowfat,Vegetarian,Broccoli & Beef Skillet Easy Express Frozen,Soy Grits Defatted,6 Flour Bread Wheat Free",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "600 g of chicken salad",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 4
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "a byron burger with skin on chips",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 1,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "1 pint of banana & raspberry smoothie",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "a salmon nori wrap from pod",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 1,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "1/4 chicken breast from nandos",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "turkey lasagne",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "500g of chicken salad",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "3 tbsp of ice cream",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 4
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "a large cappuccino",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "blueberry and cinnamon oatmeal",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 0,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "1 package of spinach",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "a small cappuccino",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "1 package of eggs",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "5 banana bar",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 1,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "tesco healthy living chicken chow mein",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "1 small banana",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 2,
+          "endPos": 2
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "a kilo of tomatoes",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "a gram of oregano",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "a can of tomato paste",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 4
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "oregano oil",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "Food",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "100 grams of oil",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "500g of ice cream",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Weight",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "Food",
+          "startPos": 2,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "3 cup of banana ice cream",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 5
+        },
+        {
+          "entity": "FoodUnit",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "2 banana",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "90k of chicken",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Weight",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "Food",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "10g of banana",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Weight",
+          "startPos": 0,
+          "endPos": 0
+        },
+        {
+          "entity": "Food",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "2 bananas",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "i had 2 apples a pastry and a black coffee",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Food",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "Food",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "i had 2 apples a pastry and a coffee",
+      "intent": "LogMeal",
+      "entities": [
+        {
+          "entity": "Food",
+          "startPos": 3,
+          "endPos": 3
+        },
+        {
+          "entity": "Food",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "Food",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    }
+  ]
+}
