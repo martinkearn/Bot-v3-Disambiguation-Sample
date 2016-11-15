@@ -66,30 +66,33 @@ namespace FoodLogger.Dialogs
             {
                 //add disambiguated food to global list
                 _disambiguatedFoods.Add(disambiguatedFood);
-                //remove ambiguous food so we don't check it again
+                //remove original food so we don't check it again
                 _foodEntitiesFromLuis.Remove(_foodEntitiesFromLuis.First());
             }
 
-            //Create card to present specific food choices 
-            IMessageActivity messageButtons = (Activity)context.MakeMessage();
-            messageButtons.Recipient = messageButtons.From;
-            messageButtons.Type = "message";
-            messageButtons.Attachments = new List<Attachment>();
+
             if (_foodEntitiesFromLuis.Count > 0)
             {
+                //Create card to present specific food choices 
+                IMessageActivity messageButtons = (Activity)context.MakeMessage();
+                messageButtons.Recipient = messageButtons.From;
+                messageButtons.Type = "message";
+                messageButtons.Attachments = new List<Attachment>();
                 var disambiguatedFoods = FoodService.GetFoods(_foodEntitiesFromLuis.First());
                 PromptForFoodDetails(ref messageButtons, disambiguatedFoods, _foodEntitiesFromLuis.First());
-            }
-            await context.PostAsync(messageButtons);
+                await context.PostAsync(messageButtons);
 
-            //if we have food entities left repeat, else confirm the result
-            if (_foodEntitiesFromLuis.Count > 0)
-            {
+                //wait for repsonse
                 context.Wait(SpecifyFoodAsync);
             }
             else
             {
-                context.Wait(ConfirmResultsAsync);
+                string summaryText = string.Format("You selected {0}, I'll log that for you", string.Join(",", _disambiguatedFoods));
+
+                await context.PostAsync(summaryText);
+
+                context.Done(_disambiguatedFoods);
+
             }
         }
 
@@ -108,19 +111,6 @@ namespace FoodLogger.Dialogs
                 Buttons = cardButtons
             };
             messageActivity.Attachments.Add(plCard.ToAttachment());
-        }
-
-        private async Task ConfirmResultsAsync(IDialogContext context, IAwaitable<object> arg2)
-        {
-            string temp = "You selected: ";
-
-            foreach (string food in _disambiguatedFoods)
-            {
-                temp += food + " ";
-            }
-
-            await context.PostAsync(temp);
-            context.Done(_disambiguatedFoods);
         }
 
     }
