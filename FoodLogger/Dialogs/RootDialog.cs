@@ -128,7 +128,7 @@ namespace FoodLogger.Dialogs
                 //Store disambiguated foods in bot state so other dialogs can access it
                 context.ConversationData.SetValue("DisambiguatedFoods", _disambiguatedFoods);
 
-                //await Summary(context, null);
+                //check that the user is happy to log the meal, if not start again
                 PromptDialog.Confirm(
                     context,
                     AfterSummaryAsync,
@@ -143,11 +143,15 @@ namespace FoodLogger.Dialogs
             var confirm = await result;
             if (confirm)
             {
+                //user is happy, log the meal here
+                FoodService.LogMeal(_disambiguatedFoods);
+
                 //pass over to the WasItHealthyDialog flow
                 await context.Forward(new WasItHealthyDialog(), ResumeAfterWasItHealthyDialog, result, CancellationToken.None);
             }
             else
             {
+                //user is not happy, clear and start again
                 context.ConversationData.Clear();
                 _disambiguatedFoods.Clear();
                 _foodEntitiesFromLuis.Clear();
@@ -158,9 +162,8 @@ namespace FoodLogger.Dialogs
 
         private async Task ResumeAfterWasItHealthyDialog(IDialogContext context, IAwaitable<object> result)
         {
-
+            //close the dialog
             await context.PostAsync("Thanks for entering your meal. What would you like to do next? You can say 'Help' to see what I can do.");
-            context.Wait(MessageReceived);
             context.Done(_disambiguatedFoods);
         }
 

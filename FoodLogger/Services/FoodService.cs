@@ -37,5 +37,10 @@ namespace FoodLogger.Services
             Random randomSeed = new Random();
             return (randomSeed.NextDouble() > 0.5);
         }
+
+        public static void LogMeal(IList<string> foods)
+        {
+            return;
+        }
     }
 }
