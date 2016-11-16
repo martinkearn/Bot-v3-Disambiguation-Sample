@@ -28,13 +28,13 @@ namespace FoodLogger.Dialogs
         }
 
         [LuisIntent("None")]
-        public async Task None(IDialogContext context, LuisResult result)
+        public async Task NoneAsync(IDialogContext context, LuisResult result)
         {
-            await RequestMealDetails(context, null);
+            await RequestMealDetailsAsync(context, null);
         }
 
         [LuisIntent("LogMeal")]
-        public async Task LogMeal(IDialogContext context, LuisResult result)
+        public async Task LogMealAsync(IDialogContext context, LuisResult result)
         {
             var foodEntities = result.Entities.Where(x => x.Type == "Food");
 
@@ -43,7 +43,7 @@ namespace FoodLogger.Dialogs
             if (foodEntities.Count() == 0)
             {
                 //no foods found, ask the user to enter what they ate
-                await RequestMealDetails(context, null);
+                await RequestMealDetailsAsync(context, null);
             }
             else
             {
@@ -62,7 +62,7 @@ namespace FoodLogger.Dialogs
             }
         }
 
-        private async Task RequestMealDetails(IDialogContext context, IAwaitable<object> result)
+        private async Task RequestMealDetailsAsync(IDialogContext context, IAwaitable<object> result)
         {
             string text = string.Format("Please tell me what you ate");
 
@@ -128,21 +128,38 @@ namespace FoodLogger.Dialogs
                 //Store disambiguated foods in bot state so other dialogs can access it
                 context.ConversationData.SetValue("DisambiguatedFoods", _disambiguatedFoods);
 
-                await Summary(context, null);
+                //await Summary(context, null);
+                PromptDialog.Confirm(
+                    context,
+                    AfterSummaryAsync,
+                    $"You selected {string.Join(" ", _disambiguatedFoods)}... Is that correct?",
+                    "Didn't get that!",
+                    promptStyle: PromptStyle.None);
             }
         }
 
-        private async Task Summary(IDialogContext context, IAwaitable<object> result)
+        public async Task AfterSummaryAsync(IDialogContext context, IAwaitable<bool> result)
         {
-            string text = string.Format("You selected {0}... I'll log that for you", string.Join(" ", _disambiguatedFoods));
-            await context.PostAsync(text);
-
-            //pass over to the WasItHealthyDialog flow
-            await context.Forward(new WasItHealthyDialog(), ResumeAfterWasItHealthyDialog, result, CancellationToken.None);
+            var confirm = await result;
+            if (confirm)
+            {
+                //pass over to the WasItHealthyDialog flow
+                await context.Forward(new WasItHealthyDialog(), ResumeAfterWasItHealthyDialog, result, CancellationToken.None);
+            }
+            else
+            {
+                context.ConversationData.Clear();
+                _disambiguatedFoods.Clear();
+                _foodEntitiesFromLuis.Clear();
+                await context.PostAsync("Sorry that is not right, please try entering your meal in a moore detailed way.");
+                context.Done(_disambiguatedFoods);
+            }
         }
 
         private async Task ResumeAfterWasItHealthyDialog(IDialogContext context, IAwaitable<object> result)
         {
+
+            await context.PostAsync("Thanks for entering your meal. What would you like to do next? You can say 'Help' to see what I can do.");
             context.Wait(MessageReceived);
             context.Done(_disambiguatedFoods);
         }
