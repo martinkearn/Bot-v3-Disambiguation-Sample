@@ -31,5 +31,11 @@ namespace FoodLogger.Services
             }
             return foods;
         }
+
+        public static Boolean IsMealHealthy(IList<string> foods)
+        {
+            Random randomSeed = new Random();
+            return (randomSeed.NextDouble() > 0.5);
+        }
     }
 }

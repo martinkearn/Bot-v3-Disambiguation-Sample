@@ -8,6 +8,7 @@ using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
 using FoodLogger.Dialogs;
+using Microsoft.Bot.Builder.Dialogs;
 
 namespace FoodLogger
 {
@@ -23,7 +24,7 @@ namespace FoodLogger
             if (activity.Type == ActivityTypes.Message)
             {
                 //Invoke LUIS dialog
-                await Microsoft.Bot.Builder.Dialogs.Conversation.SendAsync(activity, () => new RootDialog());
+                await Conversation.SendAsync(activity, () => new RootDialog());
             }
             else
             {

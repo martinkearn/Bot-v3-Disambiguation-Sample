@@ -26,20 +26,45 @@ namespace FoodLogger.Dialogs
             await base.MessageReceived(context, item);
         }
 
+        [LuisIntent("None")]
+        public async Task None(IDialogContext context, LuisResult result)
+        {
+            await RequestMealDetails(context, null);
+        }
+
         [LuisIntent("LogMeal")]
         public async Task LogMeal(IDialogContext context, LuisResult result)
         {
-            //example message from user "i had 2 bananas a pastry and a coffee"
-            _foodEntitiesFromLuis = new List<string>();
-            _disambiguatedFoods = new List<string>();
+            var foodEntities = result.Entities.Where(x => x.Type == "Food");
 
-            //enumerate food entities
-            foreach (var entity in result.Entities.Where(x => x.Type == "Food"))
+            if (foodEntities.Count() == 0)
             {
-                _foodEntitiesFromLuis.Add(entity.Entity);
+                //no foods found, ask the user to enter what they ate
+                await RequestMealDetails(context, null);
             }
+            else
+            {
+                //example message from user "i had 2 bananas a pastry and a coffee"
+                _foodEntitiesFromLuis = new List<string>();
+                _disambiguatedFoods = new List<string>();
 
-            await SpecifyFoodAsync(context, null);
+                //enumerate food entities
+                foreach (var foodEntity in foodEntities)
+                {
+                    _foodEntitiesFromLuis.Add(foodEntity.Entity);
+                }
+
+                await SpecifyFoodAsync(context, null);
+            }
+        }
+
+        private async Task RequestMealDetails(IDialogContext context, IAwaitable<object> result)
+        {
+            string text = string.Format("Please tell me what you ate");
+
+            await context.PostAsync(text);
+
+            context.Done(_disambiguatedFoods);
         }
 
         private async Task SpecifyFoodAsync(IDialogContext context, IAwaitable<object> result)
@@ -87,13 +112,36 @@ namespace FoodLogger.Dialogs
             }
             else
             {
-                string summaryText = string.Format("You selected {0}, I'll log that for you", string.Join(",", _disambiguatedFoods));
-
-                await context.PostAsync(summaryText);
-
-                context.Done(_disambiguatedFoods);
-
+                await Summary(context, null);
             }
+        }
+
+        private async Task Summary(IDialogContext context, IAwaitable<object> result)
+        {
+            string text = string.Format("You selected {0}... I'll log that for you", string.Join(" ", _disambiguatedFoods));
+
+            await context.PostAsync(text);
+
+            //pass over to the 'was it healthy' flow
+            await WasItHealthy(context, null);
+        }
+
+        private async Task WasItHealthy(IDialogContext context, IAwaitable<object> result)
+        {
+            var isHealthy = FoodService.IsMealHealthy(_disambiguatedFoods);
+
+            if (isHealthy)
+            {
+                string text = string.Format("Nice one, you made a healthy choice, you're on the right track");
+                await context.PostAsync(text);
+            }
+            else
+            {
+                string text = string.Format("Tsk tsk, that was not a great choice. I can recommend some healthier options next time if you wish?");
+                await context.PostAsync(text);
+            }
+
+            context.Done(_disambiguatedFoods);
         }
 
         private void PromptForFoodDetails(ref IMessageActivity messageActivity, IList<string> disambiguatedFoods, string foodEntity)
