@@ -6,6 +6,7 @@ using Microsoft.Bot.Connector;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -119,29 +120,15 @@ namespace FoodLogger.Dialogs
         private async Task Summary(IDialogContext context, IAwaitable<object> result)
         {
             string text = string.Format("You selected {0}... I'll log that for you", string.Join(" ", _disambiguatedFoods));
-
             await context.PostAsync(text);
 
-            //pass over to the 'was it healthy' flow
-            await WasItHealthy(context, null);
+            //pass over to the WasItHealthyDialog flow
+            await context.Forward(new WasItHealthyDialog(), ResumeAfterWasItHealthyDialog, result, CancellationToken.None);
         }
 
-        private async Task WasItHealthy(IDialogContext context, IAwaitable<object> result)
+        private async Task ResumeAfterWasItHealthyDialog(IDialogContext context, IAwaitable<object> result)
         {
-            var isHealthy = FoodService.IsMealHealthy(_disambiguatedFoods);
-
-            if (isHealthy)
-            {
-                string text = string.Format("Nice one, you made a healthy choice, you're on the right track");
-                await context.PostAsync(text);
-            }
-            else
-            {
-                string text = string.Format("Tsk tsk, that was not a great choice. I can recommend some healthier options next time if you wish?");
-                await context.PostAsync(text);
-            }
-
-            context.Done(_disambiguatedFoods);
+            context.Wait(MessageReceived);
         }
 
         private void PromptForFoodDetails(ref IMessageActivity messageActivity, IList<string> disambiguatedFoods, string foodEntity)
@@ -160,6 +147,7 @@ namespace FoodLogger.Dialogs
             };
             messageActivity.Attachments.Add(plCard.ToAttachment());
         }
+
 
     }
 }
