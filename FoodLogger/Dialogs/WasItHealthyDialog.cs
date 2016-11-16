@@ -1,4 +1,5 @@
-﻿using Microsoft.Bot.Builder.Dialogs;
+﻿using FoodLogger.Services;
+using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 using System;
 using System.Collections.Generic;
@@ -18,32 +19,31 @@ namespace FoodLogger.Dialogs
         }
 
 
-
         public virtual async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
         {
+            //get disambiguated food from bot state
+            List<string> DisambiguatedFoods = new List<string>();
+            context.ConversationData.TryGetValue("DisambiguatedFoods", out DisambiguatedFoods);
+            var disambiguatedFoodsString = (DisambiguatedFoods.Count > 0) ?
+                string.Join(" ", DisambiguatedFoods) :
+                "your meal";
 
-            await context.PostAsync($"inside was it health dialog.");
 
-            context.Done(string.Empty);
+            //check if the meal was healthy and report back to user
+            var isHealthy = FoodService.IsMealHealthy(DisambiguatedFoods);
+            if (isHealthy)
+            {
+                string text = ($"Nice one, you made a healthy choice with {disambiguatedFoodsString}, you're on the right track");
+                await context.PostAsync(text);
+            }
+            else
+            {
+                string text = ($"Tsk tsk, {disambiguatedFoodsString} was not a great choice. I can recommend some healthier options next time if you wish?");
+                await context.PostAsync(text);
+            }
+
+            context.Done(isHealthy);
         }
 
-
-        //private async Task WasItHealthy(IDialogContext context, IAwaitable<object> result)
-        //{
-        //    var isHealthy = FoodService.IsMealHealthy(_disambiguatedFoods);
-
-        //    if (isHealthy)
-        //    {
-        //        string text = string.Format("Nice one, you made a healthy choice, you're on the right track");
-        //        await context.PostAsync(text);
-        //    }
-        //    else
-        //    {
-        //        string text = string.Format("Tsk tsk, that was not a great choice. I can recommend some healthier options next time if you wish?");
-        //        await context.PostAsync(text);
-        //    }
-
-        //    context.Done(_disambiguatedFoods);
-        //}
     }
 }

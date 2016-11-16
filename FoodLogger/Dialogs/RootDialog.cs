@@ -38,6 +38,8 @@ namespace FoodLogger.Dialogs
         {
             var foodEntities = result.Entities.Where(x => x.Type == "Food");
 
+            
+
             if (foodEntities.Count() == 0)
             {
                 //no foods found, ask the user to enter what they ate
@@ -123,6 +125,9 @@ namespace FoodLogger.Dialogs
             }
             else
             {
+                //Store disambiguated foods in bot state so other dialogs can access it
+                context.ConversationData.SetValue("DisambiguatedFoods", _disambiguatedFoods);
+
                 await Summary(context, null);
             }
         }
