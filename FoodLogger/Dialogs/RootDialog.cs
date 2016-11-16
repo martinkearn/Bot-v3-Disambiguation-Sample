@@ -55,7 +55,8 @@ namespace FoodLogger.Dialogs
                     _foodEntitiesFromLuis.Add(foodEntity.Entity);
                 }
 
-                await SpecifyFoodAsync(context, null);
+                //disambiguate foods
+                await DisambiguateFoodAsync(context, null);
             }
         }
 
@@ -68,7 +69,7 @@ namespace FoodLogger.Dialogs
             context.Done(_disambiguatedFoods);
         }
 
-        private async Task SpecifyFoodAsync(IDialogContext context, IAwaitable<object> result)
+        private async Task DisambiguateFoodAsync(IDialogContext context, IAwaitable<object> result)
         {
             string disambiguatedFood = null;
 
@@ -90,12 +91,9 @@ namespace FoodLogger.Dialogs
             //add the incoming message to the disambiguated foods list and remove from the orginal entities list
             if (!string.IsNullOrEmpty(disambiguatedFood))
             {
-                //add disambiguated food to global list
                 _disambiguatedFoods.Add(disambiguatedFood);
-                //remove original food so we don't check it again
                 _foodEntitiesFromLuis.Remove(_foodEntitiesFromLuis.First());
             }
-
 
             if (_foodEntitiesFromLuis.Count > 0)
             {
@@ -104,12 +102,24 @@ namespace FoodLogger.Dialogs
                 messageButtons.Recipient = messageButtons.From;
                 messageButtons.Type = "message";
                 messageButtons.Attachments = new List<Attachment>();
+                List<CardAction> cardButtons = new List<CardAction>();
                 var disambiguatedFoods = FoodService.GetFoods(_foodEntitiesFromLuis.First());
-                PromptForFoodDetails(ref messageButtons, disambiguatedFoods, _foodEntitiesFromLuis.First());
+                foreach (var food in disambiguatedFoods)
+                {
+                    cardButtons.Add(new CardAction() { Value = food, Type = "imBack", Title = food });
+                }
+                HeroCard plCard = new HeroCard()
+                {
+                    Title = null,
+                    Subtitle = string.Format("You said {0}, which one did you mean?", _foodEntitiesFromLuis.First()),
+                    Images = null,
+                    Buttons = cardButtons
+                };
+                messageButtons.Attachments.Add(plCard.ToAttachment());
                 await context.PostAsync(messageButtons);
 
                 //wait for repsonse
-                context.Wait(SpecifyFoodAsync);
+                context.Wait(DisambiguateFoodAsync);
             }
             else
             {
@@ -129,23 +139,7 @@ namespace FoodLogger.Dialogs
         private async Task ResumeAfterWasItHealthyDialog(IDialogContext context, IAwaitable<object> result)
         {
             context.Wait(MessageReceived);
-        }
-
-        private void PromptForFoodDetails(ref IMessageActivity messageActivity, IList<string> disambiguatedFoods, string foodEntity)
-        {
-            List<CardAction> cardButtons = new List<CardAction>();
-            foreach (var disambiguatedFood in disambiguatedFoods)
-            {
-                cardButtons.Add(new CardAction() { Value = disambiguatedFood, Type = "imBack", Title = disambiguatedFood });
-            }
-            HeroCard plCard = new HeroCard()
-            {
-                Title = null,
-                Subtitle = string.Format("You said {0}, which one did you mean?", foodEntity),
-                Images = null,
-                Buttons = cardButtons
-            };
-            messageActivity.Attachments.Add(plCard.ToAttachment());
+            context.Done(_disambiguatedFoods);
         }
 
 
