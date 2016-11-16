@@ -42,7 +42,7 @@ namespace FoodLogger.Dialogs
                 await context.PostAsync(text);
             }
 
-            context.Done(isHealthy);
+            //context.Done(isHealthy);
         }
 
     }
